@@ -133,6 +133,12 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
 .compass-card h3 { margin-bottom: 17px; font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.2; }
 .compass-card > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
 .compass-card-vision > p:last-child { color: #d9deea; }
+.core-value-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.core-value-card { padding: 21px; background: white; border: 1px solid var(--line); border-top: 2px solid var(--gold); }
+.core-value-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
+.core-value-heading > span { display: grid; width: 36px; height: 36px; flex: 0 0 36px; place-items: center; color: var(--gold); background: var(--navy); border-radius: 50%; font-family: var(--serif); font-size: 18px; }
+.core-value-heading h3 { margin: 0; color: var(--navy); font-family: var(--serif); font-size: 17px; font-weight: 400; line-height: 1.25; }
+.core-value-card > p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.85; }
 .principle-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
 .principle-list article, .fee-list article { display: flex; gap: 17px; padding-top: 21px; border-top: 1px solid #ded9ca; }
 .principle-list article > span, .fee-list article > span { color: #b79b26; font-size: 10px; font-weight: 750; letter-spacing: 1px; }
@@ -263,6 +269,7 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .hero-copy { padding-left: 0; }
   .story-grid { gap: 6%; }
   .principle-list { grid-template-columns: repeat(2, 1fr); }
+  .core-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .degree-grid, .levels-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tvl-track-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .basic-summary { grid-template-columns: 1fr; }
@@ -307,6 +314,7 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .intro-grid { gap: 22px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 16px; margin-bottom: 30px; }
   .value-grid, .principle-list, .degree-grid, .levels-grid { grid-template-columns: 1fr; }
+  .core-value-grid { grid-template-columns: 1fr; }
   .value-card { min-height: 220px; }
   .home-feature { grid-template-columns: 1fr; }
   .feature-photo { min-height: 260px; }
