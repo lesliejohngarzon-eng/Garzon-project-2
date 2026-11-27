@@ -171,6 +171,30 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
 .track-lists h5 { margin: 0; color: var(--navy); font-size: 9px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
 .track-lists ul { margin: 9px 0 0; padding-left: 16px; color: var(--muted); font-size: 10px; line-height: 1.8; }
 .track-lists li::marker { color: #b79b26; }
+.basic-education-section { background: var(--cream); }
+.basic-education-intro { max-width: 760px; margin-bottom: 48px; }
+.basic-education-intro h2 { margin-bottom: 14px; font-size: clamp(38px, 4vw, 52px); }
+.basic-education-intro > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.basic-department + .basic-department { margin-top: 62px; }
+.basic-department-heading { margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.basic-department-heading .eyebrow { margin-bottom: 8px; }
+.basic-department-heading h3 { margin: 0; color: var(--navy); font-family: var(--serif); font-size: clamp(25px, 3vw, 32px); font-weight: 400; }
+.basic-summary { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 24px; margin-bottom: 24px; }
+.basic-summary-copy > p { color: var(--muted); font-size: 12px; line-height: 1.9; }
+.basic-summary-copy > p:last-child { margin-bottom: 0; }
+.why-choose { padding: 24px; background: white; border: 1px solid var(--line); }
+.why-choose h4, .learning-areas h4 { margin: 0 0 16px; color: var(--navy); font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.why-choose ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; margin: 0; padding: 0; list-style: none; }
+.why-choose li { position: relative; padding-left: 18px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.why-choose li::before { position: absolute; left: 0; color: #b79b26; content: "✓"; font-weight: 800; }
+.education-feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.education-feature { padding: 21px; background: white; border: 1px solid var(--line); border-top: 2px solid var(--gold); }
+.education-feature h4 { margin: 0 0 9px; font-family: var(--serif); font-size: 18px; font-weight: 400; line-height: 1.3; }
+.education-feature p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+.jhs-intro { max-width: 900px; margin-bottom: 22px; }
+.learning-areas { margin-bottom: 22px; padding: 23px; background: white; border: 1px solid var(--line); }
+.learning-areas ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px 20px; margin: 0; padding-left: 18px; color: var(--muted); font-size: 11px; }
+.learning-areas li::marker { color: #b79b26; }
 .notice { margin: 28px 0 0; padding: 17px 20px; color: #58657b; background: #f4f1e7; border-left: 3px solid #c3a625; font-size: 11px; line-height: 1.8; }
 .muted-section { background: var(--cream); }
 .detail-grid { display: grid; grid-template-columns: 1.3fr .7fr; align-items: start; gap: 9%; }
@@ -231,6 +255,9 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .principle-list { grid-template-columns: repeat(2, 1fr); }
   .degree-grid, .levels-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tvl-track-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .basic-summary { grid-template-columns: 1fr; }
+  .education-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .learning-areas ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-links { grid-column: 1 / -1; justify-content: flex-start; }
 }
@@ -257,6 +284,7 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .track-group-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
   .academic-track-grid, .tvl-track-grid { grid-template-columns: 1fr; }
   .track-lists { grid-template-columns: 1fr; }
+  .education-feature-grid, .learning-areas ul, .why-choose ul { grid-template-columns: 1fr; }
   .senior-high-links { align-items: stretch; flex-direction: column; }
   .hero-copy { padding-bottom: 20px; }
   .hero h1 { font-size: clamp(43px, 12vw, 60px); }
