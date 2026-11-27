@@ -233,15 +233,32 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
 .contact-icon { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; color: var(--navy); background: #f7f0d7; border-radius: 50%; font-size: 18px; }
 .contact-detail div { display: flex; flex-direction: column; gap: 4px; }
 .contact-detail strong { font-size: 11px; }
-.contact-detail div span { color: var(--muted); font-size: 11px; line-height: 1.7; }
+.contact-detail div span, .contact-detail div a { color: var(--muted); font-size: 11px; line-height: 1.7; }
+.contact-detail div a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+.contact-inquiries { margin-top: 30px; }
 .contact-form { display: grid; gap: 10px; padding: 32px; background: var(--cream); }
 .contact-form .eyebrow { margin-bottom: -4px; }
 .contact-form h3 { margin-bottom: 10px; font-family: var(--serif); font-size: 27px; font-weight: 400; }
+.contact-form-intro { margin: -4px 0 6px; color: var(--muted); font-size: 11px; }
 .contact-form label { margin-top: 5px; font-size: 10px; font-weight: 700; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 12px 13px; color: var(--ink); background: white; border: 1px solid #ded9ca; border-radius: 2px; outline: none; font-size: 12px; }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--navy); box-shadow: 0 0 0 2px #102c5c16; }
 .contact-form textarea { resize: vertical; }
+.form-note { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
 .form-status { min-height: 18px; margin: 0; color: var(--navy); font-size: 11px; }
+.contact-footer-grid { display: grid; grid-template-columns: 1.15fr .85fr 1.1fr; gap: 38px; padding-bottom: 35px; }
+.contact-footer-grid h3 { margin-bottom: 15px; color: white; font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.footer-school-description { margin: 16px 0 0; color: #b8c2d4; font-size: 11px; line-height: 1.8; }
+.footer-contact-info { display: grid; gap: 8px; margin-top: 15px; }
+.footer-contact-info span, .footer-contact-info a { color: #d9deea; font-size: 10px; line-height: 1.7; overflow-wrap: anywhere; }
+.footer-contact-info a:hover { color: var(--gold); }
+.contact-quick-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: 10px 15px; }
+.contact-quick-links h3 { grid-column: 1 / -1; }
+.contact-quick-links a, .footer-mission > a { color: #d9deea; font-size: 10px; }
+.contact-quick-links a:hover, .footer-mission > a:hover { color: var(--gold); }
+.footer-mission p { color: #b8c2d4; font-size: 11px; line-height: 1.8; }
+.footer-mission > a { display: flex; flex-direction: column; gap: 3px; margin-top: 15px; }
+.footer-mission > a strong { color: var(--gold); }
 .life-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
 .life-card { min-height: 240px; padding: 28px; background: #f4f1e7; }
 .life-card-large { grid-row: span 2; padding: 0; background: white; border: 1px solid var(--line); }
@@ -275,6 +292,8 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .basic-summary { grid-template-columns: 1fr; }
   .education-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .learning-areas ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .footer-mission { grid-column: 1 / -1; }
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-links { grid-column: 1 / -1; justify-content: flex-start; }
 }
@@ -321,6 +340,8 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .feature-panel { padding: 48px 25px; }
   .cta-inner { align-items: flex-start; flex-direction: column; }
   .footer-main { grid-template-columns: 1fr; gap: 20px; }
+  .contact-footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-mission { grid-column: auto; }
   .footer-links { grid-column: auto; justify-content: flex-start; }
   .footer-bottom { flex-direction: column; gap: 8px; }
   .page-hero { padding: 58px 0 35px; }

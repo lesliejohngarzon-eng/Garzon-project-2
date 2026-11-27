@@ -26,7 +26,14 @@ const formStatus = document.querySelector("#form-status");
 if (contactForm instanceof HTMLFormElement && formStatus) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    formStatus.textContent = "This demo does not send messages. Please use the college’s official contact channels.";
-    contactForm.reset();
+    const formData = new FormData(contactForm);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const subject = String(formData.get("subject") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+    const body = `Name: ${name}\r\nEmail: ${email}\r\n\r\n${message}`;
+
+    formStatus.textContent = "Opening your email app. Review the message there and send it to the college.";
+    window.location.href = `mailto:kcc_1927@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
