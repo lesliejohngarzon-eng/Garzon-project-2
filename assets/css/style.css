@@ -128,19 +128,21 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
 .principle-list article > span, .fee-list article > span { color: #b79b26; font-size: 10px; font-weight: 750; letter-spacing: 1px; }
 .principle-list h3, .fee-list h3 { margin: -5px 0 7px; font-family: var(--serif); font-size: 19px; font-weight: 400; }
 .principle-list p, .fee-list p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
-.program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.program-card { overflow: hidden; background: white; border: 1px solid var(--line); }
-.program-art { position: relative; display: flex; min-height: 220px; justify-content: space-between; flex-direction: column; padding: 22px; color: white; }
-.program-art::after { position: absolute; right: 15px; bottom: -34px; width: 140px; height: 140px; border: 1px solid #ffffff65; border-radius: 50%; box-shadow: 0 0 0 20px #ffffff13, 0 0 0 40px #ffffff0d; content: ""; }
-.program-art > span { z-index: 1; font-size: 8px; font-weight: 700; letter-spacing: 1.5px; }
-.program-art b { z-index: 1; font-family: var(--serif); font-size: 35px; font-weight: 400; line-height: 1.05; }
-.art-education { background: #183761; }
-.art-business { background: #bb9c2e; }
-.art-digital { background: #526b8b; }
-.program-info { padding: 24px; }
-.program-info .eyebrow { margin-bottom: 9px; }
-.program-info h3 { min-height: 54px; margin-bottom: 9px; font-family: var(--serif); font-size: 20px; font-weight: 400; line-height: 1.3; }
-.program-info > p:not(.eyebrow) { min-height: 64px; margin-bottom: 18px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.program-department + .program-department { margin-top: 56px; }
+.department-heading { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.department-heading .eyebrow { margin-bottom: 8px; }
+.department-heading h3 { margin: 0; color: var(--navy); font-family: var(--serif); font-size: clamp(24px, 3vw, 31px); font-weight: 400; line-height: 1.2; }
+.degree-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.degree-card { padding: 23px; background: white; border: 1px solid var(--line); border-top: 3px solid var(--gold); }
+.degree-card .degree-code { margin-bottom: 12px; color: var(--navy); font-size: 9px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; }
+.degree-card h4 { margin: 0 0 11px; font-family: var(--serif); font-size: 19px; font-weight: 400; line-height: 1.3; }
+.degree-card > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.levels-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.level-card { display: flex; min-height: 240px; align-items: flex-start; flex-direction: column; padding: 26px; background: white; border: 1px solid var(--line); }
+.level-card .degree-code { margin-bottom: 12px; color: var(--navy); font-size: 9px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; }
+.level-card h3 { margin-bottom: 10px; font-family: var(--serif); font-size: 23px; font-weight: 400; }
+.level-card > p:not(.degree-code) { margin-bottom: 22px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.level-card .text-link { margin-top: auto; }
 .notice { margin: 28px 0 0; padding: 17px 20px; color: #58657b; background: #f4f1e7; border-left: 3px solid #c3a625; font-size: 11px; line-height: 1.8; }
 .muted-section { background: var(--cream); }
 .detail-grid { display: grid; grid-template-columns: 1.3fr .7fr; align-items: start; gap: 9%; }
@@ -199,6 +201,7 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .hero-copy { padding-left: 0; }
   .story-grid { gap: 6%; }
   .principle-list { grid-template-columns: repeat(2, 1fr); }
+  .degree-grid, .levels-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-links { grid-column: 1 / -1; justify-content: flex-start; }
 }
@@ -229,7 +232,7 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .section-pad { padding: 68px 0; }
   .intro-grid { gap: 22px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 16px; margin-bottom: 30px; }
-  .value-grid, .program-grid, .principle-list { grid-template-columns: 1fr; }
+  .value-grid, .principle-list, .degree-grid, .levels-grid { grid-template-columns: 1fr; }
   .value-card { min-height: 220px; }
   .home-feature { grid-template-columns: 1fr; }
   .feature-photo { min-height: 260px; }
@@ -242,8 +245,6 @@ h1 em, h2 em { color: var(--navy); font-weight: 400; }
   .page-hero h1 { font-size: clamp(43px, 12vw, 58px); }
   .story-image { min-height: 340px; }
   .story-grid { gap: 35px; }
-  .program-card { max-width: 430px; }
-  .program-info h3, .program-info > p:not(.eyebrow) { min-height: 0; }
   .detail-aside { margin-top: 12px; }
   .contact-form { padding: 24px 20px; }
   .life-grid { grid-template-columns: 1fr; }
